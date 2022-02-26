@@ -1,0 +1,18 @@
+.TheGameBoard{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-self: center;
+    left: 35%;
+    padding-top: 40px;
+    margin-top: 0;
+    position: absolute;
+    height: 100%;
+    width: max-content;
+    border-left: 2px black solid;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-right: 2px black solid ;
+    background-color: #2E2836;
+}
