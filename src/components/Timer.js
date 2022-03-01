@@ -22,6 +22,6 @@ export const Time = ({gameOver , sendTime}) => {
         clearInterval(timeInterValid);
     }
   }, [Time, SetTime, gameOver, sendTime]);
-  return <div style={{ fontSize : '24px' , color : 'white' , marginTop : '22px'
+  return <div style={{ fontSize : '24px' , color : '#581b98' , marginTop : '22px'
   }}>{gameOver ? sTime : Time}</div>;
 };

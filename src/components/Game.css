@@ -10,9 +10,9 @@
     position: absolute;
     height: 100%;
     width: max-content;
-    border-left: 2px black solid;
+    border-left: 2px hidden;
     padding-left: 40px;
     padding-right: 40px;
-    border-right: 2px black solid ;
-    background-color: #2E2836;
+    border-right: 2px hidden ;
+    background-color: #c5e3f6;
 }

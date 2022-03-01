@@ -92,11 +92,11 @@ export const Board = () => {
         })}
         {gameOver &&
           (nonMineCount === 0 ? (
-            <p style={{ fontSize: "32px", marginTop: "40px", color: "green" }}>
+            <p style={{ fontSize: "32px", marginTop: "40px", color: "#0e153a" }}>
               You Won !
             </p>
           ) : (
-            <p style={{ fontSize: "32px", marginTop: "40px", color: "red" }}>
+            <p style={{ fontSize: "32px", marginTop: "40px", color: "#f5587b" }}>
               You Lost !
             </p>
           ))}

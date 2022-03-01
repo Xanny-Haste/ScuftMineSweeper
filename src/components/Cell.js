@@ -6,7 +6,7 @@ export const Cell = ({ details, updateFlag, revealedCell }) => {
     }
   };
   const mouseOut = (e) => {
-    if (details.revealed) e.target.style.backgroundColor = "#DEC3BE";
+    if (details.revealed) e.target.style.backgroundColor = "#fccde2";
     if (!details.revealed) e.target.style.backgroundColor = "#2680A6";
   };
   const StyleNumber = {
@@ -15,7 +15,7 @@ export const Cell = ({ details, updateFlag, revealedCell }) => {
     border: "2px hidden",
     cursor: details.revealed ? "default" : "pointer",
     margin: 10,
-    backgroundColor: details.revealed ? "#DEC3BE" : "#2680A6",
+    backgroundColor: details.revealed ? '#fccde2' : "#2680A6",
     textAlign: "Center",
     marginTop : '20px ',
     textAlign :'Center',
