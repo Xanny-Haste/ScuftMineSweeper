@@ -59,6 +59,12 @@ export const Board = () => {
     }
   };
 
+  const flagCell  = (x, y) => {
+    let newBoardValue = JSON.parse(JSON.stringify(grid));
+    newBoardValue[x][y].flagged = !newBoardValue[x][y].flagged;
+    setGrid(newBoardValue);
+  };
+
   const hoverColor = (e) => {
     e.target.style.background = "#3A0CA3";
     e.target.style.transition = "1s";
@@ -72,7 +78,9 @@ export const Board = () => {
   }
   return (
     <div>
+
       <Time gameOver={gameOver} setTime={setTime} newTime={newTime} />
+      <p style = {{marginTop: "20px" , color:"#581b98" , fontSize : '30px' , fontWeight : '700' }}>Steps Left To Take :  {nonMineCount}</p>
       <div style={{ marginTop: "40px" }}>
         {grid.map((SingleRow, index1) => {
           return (
@@ -84,6 +92,7 @@ export const Board = () => {
                     details={singleBlock}
                     updateFlag={updateFlag}
                     key={`${index1} - ${index2}`}
+                    flagCell={flagCell}
                   />
                 );
               })}
@@ -92,11 +101,15 @@ export const Board = () => {
         })}
         {gameOver &&
           (nonMineCount === 0 ? (
-            <p style={{ fontSize: "32px", marginTop: "40px", color: "#0e153a" }}>
+            <p
+              style={{ fontSize: "32px", marginTop: "40px", color: "#0e153a" }}
+            >
               You Won !
             </p>
           ) : (
-            <p style={{ fontSize: "32px", marginTop: "40px", color: "#f5587b" }}>
+            <p
+              style={{ fontSize: "32px", marginTop: "40px", color: "#f5587b" }}
+            >
               You Lost !
             </p>
           ))}
